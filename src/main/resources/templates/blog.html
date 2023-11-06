@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Generated Blog</title>
+</head>
+<body>
+
+<div th:if="${response != null}" th:utext="${response}">
+    <!-- OpenAI response to be displayed here -->
+    <p>${th:utext}</p>
+    <hr/>
+    <div>
+        <h2>Bullet List from OpenAI:</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <!-- Add more list items here as needed -->
+        </ul>
+    </div>
+    <hr/>
+    <div>
+        <h2>Image from OpenAI:</h2>
+        <img th:src="@{your_image_url_here}" alt="Image from OpenAI" />
+    </div>
+</div>
+</div>
+</body>
+</html>
