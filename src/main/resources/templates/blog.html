@@ -2,28 +2,38 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Generated Blog</title>
+    <link rel="stylesheet" th:href="@{/css/blog.css}" />
 </head>
 <body>
 
-<div th:if="${response != null}" th:utext="${response}">
+<!--<div th:if="${response != null}" th:utext="${response}">-->
     <!-- OpenAI response to be displayed here -->
-    <p>${th:utext}</p>
-    <hr/>
-    <div>
-        <h2>Bullet List from OpenAI:</h2>
-        <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <!-- Add more list items here as needed -->
-        </ul>
-    </div>
-    <hr/>
-    <div>
-        <h2>Image from OpenAI:</h2>
-        <img th:src="@{your_image_url_here}" alt="Image from OpenAI" />
-    </div>
+
+<!-- Paragraphs division -->
+
+<div th:if="${response != null}">
+    <h2 class="mk">ANSWER :</h2>
+    <div id="response-container"></div>
 </div>
-</div>
+
+<script th:inline="javascript">
+    var response = /*[[${response}]]*/ '';
+    var responseContainer = document.getElementById("response-container");
+    var responseLines = response.split('\n');
+    responseLines.forEach(function(line) {
+        if (line.startsWith("*")) {
+            var bulletPoint = document.createElement("li");
+            bulletPoint.textContent = line.substring(1).trim();
+            var unorderedList = document.createElement("ul");
+            unorderedList.appendChild(bulletPoint);
+            responseContainer.appendChild(unorderedList);
+        } else {
+            var paragraph = document.createElement("p");
+            paragraph.textContent = line;
+            responseContainer.appendChild(paragraph);
+        }
+    });
+</script>
+
 </body>
 </html>

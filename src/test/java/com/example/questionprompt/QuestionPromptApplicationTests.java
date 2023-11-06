@@ -1,10 +1,10 @@
-package com.techelly.chatgptwithuserinterface;
+package com.example.questionprompt;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ChatgptwithuserinterfaceApplicationTests {
+class QuestionPromptApplicationTests {
 
 	@Test
 	void contextLoads() {

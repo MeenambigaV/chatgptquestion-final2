@@ -1,4 +1,4 @@
-package com.techelly.chatgptwithuserinterface.model;
+package com.example.questionprompt.model;
 
 import org.springframework.stereotype.Component;
 
@@ -14,8 +14,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Usage {
-	private int total_tokens;
-	private int prompt_tokens;
-	private int completion_tokens;
+public class Choice {
+	private Message message;
+	//private String text;
 }

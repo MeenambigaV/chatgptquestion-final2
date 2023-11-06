@@ -1,4 +1,4 @@
-package com.techelly.chatgptwithuserinterface.model;
+package com.example.questionprompt.model;
 
 import org.springframework.stereotype.Component;
 
@@ -25,4 +25,20 @@ public class Message {
 	private String role;//Specifies the sender of the message(it is 'user' for request and 'assistant' in response).
 	private String content; //This is the actual message
 	// getters & setters
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
 }

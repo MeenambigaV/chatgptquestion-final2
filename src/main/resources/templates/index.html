@@ -3,14 +3,14 @@
 <head th:fragment="head">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-	<title>ChatGPT & Spring demo</title>
+	<title>OpenAI response</title>
 	<link rel="stylesheet" th:href="@{/css/main.css}" />
 </head>
 <body>
 <main role="main" class="container">
 	<div class="starter-template">
-		<h1>ChatGPT API <br/></h1>
-		<h2>Send message to ChatGPT</h2>
+		<h1>OPENAI PROMPT<br/></h1>
+		<h2>Enter the text : </h2>
 		<form th:action="@{/}" method="post">
 			<fieldset>
 				<div class="form-group">
@@ -22,8 +22,8 @@
 				</div>
 			</fieldset>
 		</form>
+	</div>
+   </main>
 
-
-</main>
 </body>
 </html>

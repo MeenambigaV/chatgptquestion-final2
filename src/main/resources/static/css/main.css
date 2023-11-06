@@ -1,5 +1,6 @@
 body {
 	font-size: large;
+	 background-color: aquamarine;
 }
 
 .starter-template {
@@ -10,8 +11,12 @@ input {
 	font-size: large;
 	padding: 5px;
 	margin: 5px;
-	border: inset;
-	width: 100%;
+	border: 1px solid red;
+	width:100px;
+
+}
+#prompt{
+width:650px;
 }
 
 fieldset {
@@ -19,9 +24,9 @@ fieldset {
 }
 
 h1 {
-	color: #ff00ff;
+	color:blue;
 }
 
 h2 {
-	color: #000000;
+	 color:Black;
 }

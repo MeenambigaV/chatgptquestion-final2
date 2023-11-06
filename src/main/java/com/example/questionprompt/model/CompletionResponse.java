@@ -1,4 +1,4 @@
-package com.techelly.chatgptwithuserinterface.model;
+package com.example.questionprompt.model;
 
 import java.util.List;
 import java.util.Optional;
